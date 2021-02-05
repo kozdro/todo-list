@@ -93,6 +93,7 @@ h1 {
 
 .tools {
     display: inline-block;
+    font-size: 0;
 }
 
 .tools button {
