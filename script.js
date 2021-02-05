@@ -33,6 +33,7 @@ const prepareDOMElements = () => {
 const prepareDOMEvents = () => {
     $addBtn.addEventListener('click', addNewTask);
     $todoInput.addEventListener('keyup', enterCheck);
+    $ulList.addEventListener('click', checkClick);
 }
 
 const addNewTask = () => {
@@ -61,6 +62,21 @@ const addNewTask = () => {
 const enterCheck = (e) => {
     if (e.keyCode === 13) {
         addNewTask();
+    }
+}
+
+const checkClick = (e) => {
+    if (e.target.closest('button').classList.contains('complete')) {
+        e.target.closest('li').classList.toggle('completed');
+        e.target.closest('button').classList.toggle('completed');
+    } else if (e.target.closest('button').classList.contains('delete')) {
+        e.target.closest('li').remove();
+        
+        if ($allTasks.length === 0) {
+            $alertInfo.innerText = 'Brak zadań na liście.';
+        }
+    } else if (e.target.closest('button').classList.contains('edit')) {
+        $popup.style.display = 'flex';
     }
 }
 
