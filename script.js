@@ -34,6 +34,8 @@ const prepareDOMEvents = () => {
     $addBtn.addEventListener('click', addNewTask);
     $todoInput.addEventListener('keyup', enterCheck);
     $ulList.addEventListener('click', checkClick);
+    $addPopupBtn.addEventListener('click', changeToDo);
+    $closeTodoBtn.addEventListener('click', closePopup);
 }
 
 const addNewTask = () => {
@@ -76,8 +78,30 @@ const checkClick = (e) => {
             $alertInfo.innerText = 'Brak zadań na liście.';
         }
     } else if (e.target.closest('button').classList.contains('edit')) {
-        $popup.style.display = 'flex';
+        editTask(e);
     }
+}
+
+const editTask = (e) => {
+    const oldToDo = e.target.closest('li').id;
+    $editedTodo = document.getElementById(oldToDo);
+    $popupInput.value = $editedTodo.firstChild.textContent;
+    $popup.style.display = 'flex';
+}
+
+const changeToDo = () => {
+    if ($popupInput.value !== '') {
+        $editedTodo.firstChild.textContent = $popupInput.value;
+        $popup.style.display = 'none';
+        $popupInfo.innerText = '';
+    } else {
+        $popupInfo.innerText = 'Musisz podać jakąś treść!'
+    }
+}
+
+const closePopup = () => {
+    $popup.style.display = 'none';
+    $popupInfo.innerText = '';
 }
 
 document.addEventListener('DOMContentLoaded', main);
