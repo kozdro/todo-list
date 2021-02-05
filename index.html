@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <script src="https://kit.fontawesome.com/39d617f521.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="todo">
+            <h1>ToDo List</h1>
+            <input type="text" class="todo-input" placeholder="Wpisz treść zadania">
+            <button class="add">Dodaj</button>
+        </div>
+        <div class="list">
+            <h3>Lista zadań:</h3>
+            <p class="alert-info">Brak zadań na liście.</p>
+            <ul>
+                <li id="test">
+                    Wypić kawę
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</i></button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li id="test">
+                    Zjeść śniadanie
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</i></button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li id="test">
+                    Umyć okna
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</i></button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup">
+        <h3>Edytuj zadanie:</h3>
+        <div class="popup-body">
+            <p class="popup-info"></p>
+            <input type="text" class="popup-input" placeholder="Wprowadź nową treść zadania...">
+            <button class="popup-btn accept">Zatwierdź</button>
+            <button class="popup-btn cancel">Anuluj</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
