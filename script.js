@@ -76,6 +76,7 @@ const checkClick = (e) => {
         
         if ($allTasks.length === 0) {
             $alertInfo.innerText = 'Brak zadań na liście.';
+            $alertInfo.style.color = 'var(--dark-violet)'
         }
     } else if (e.target.closest('button').classList.contains('edit')) {
         editTask(e);
