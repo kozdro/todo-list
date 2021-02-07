@@ -86,7 +86,7 @@ h1 {
     align-items: center;
     margin: 15px;
     padding-left: 20px;
-    text-align-last: left;
+    text-align: left;
     list-style: none;
     background-color: var(--light);
 }
@@ -186,4 +186,185 @@ h1 {
 .popup-btn:hover {
     color: #fff;
     background-color: var(--light-violet);
+}
+
+.warning-message {
+    display: none;
+}
+
+
+@media (max-width: 420px) and (orientation: portrait) {
+    body {
+        margin-top: 0;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .todo-input {
+        width: 100%;
+    }
+
+    .add {
+        margin-top: 10px;
+    }
+
+    .list li {
+        flex-direction: column;
+        padding: 5px 10px;
+        align-items: flex-start;
+    }
+
+    .tools {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .popup {
+        width: 100%;
+    }
+
+    .popup-btn {
+        width: 35%;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 400px) and (orientation: portrait) {
+    .list li {
+        font-size: 20px;
+    }
+
+    .tools button {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    body {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .todo-input {
+        width: 70%;
+        padding: 20px 0;
+        font-size: 20px;
+    }
+
+    .add {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .list li {
+        padding: 5px 10px;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    .list h3 {
+        font-size: 30px;
+    }
+
+    .tools button {
+        font-size: 22px;
+    }
+
+    .popup {
+        width: 100%;
+    }
+
+    .popup h3 {
+        font-size: 40px;
+    }
+
+    .popup-input {
+        font-size: 28px;
+    }
+
+    .popup-btn {
+        width: 30%;
+        padding: 10px 22px;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    body {
+        margin-top: 200px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .wrapper {
+        width: 100vw;
+    }
+
+    .todo-input {
+        width: 70%;
+        padding: 30px 0;
+        font-size: 28px;
+    }
+
+    .add {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .list li {
+        padding: 5px 10px;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .list h3 {
+        font-size: 40px;
+    }
+
+    .tools {
+        display: inline-block;
+    }
+
+    .tools button {
+        font-size: 26px;
+    }
+
+    .popup {
+        width: 100%;
+    }
+
+    .popup h3 {
+        font-size: 40px;
+    }
+
+    .popup-input {
+        font-size: 28px;
+    }
+
+    .popup-btn {
+        width: 30%;
+        padding: 10px 22px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+    .wrapper {
+        display: none;
+    }
+
+    .warning-message {
+        display: block;
+    }
 }
